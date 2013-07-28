@@ -3,6 +3,7 @@
 
 #include "bunsan/testing/filesystem/tempdir.hpp"
 #include "bunsan/testing/filesystem/read_data.hpp"
+#include "bunsan/testing/filesystem/write_data.hpp"
 
 #include <boost/filesystem/fstream.hpp>
 #include <boost/filesystem/operations.hpp>
@@ -32,6 +33,14 @@ BOOST_FIXTURE_TEST_CASE(read_data, bunsan::testing::filesystem::tempdir)
     fout << some_data;
     fout.close();
     BOOST_REQUIRE(boost::filesystem::exists(file));
+    BOOST_CHECK_EQUAL(bunsan::testing::filesystem::read_data(file), some_data);
+}
+
+BOOST_FIXTURE_TEST_CASE(write_data, bunsan::testing::filesystem::tempdir)
+{
+    const boost::filesystem::path file = path / "file";
+    const std::string some_data = "Hello, world! I am testing framework.";
+    bunsan::testing::filesystem::write_data(file, some_data);
     BOOST_CHECK_EQUAL(bunsan::testing::filesystem::read_data(file), some_data);
 }
 
