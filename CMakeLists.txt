@@ -15,6 +15,7 @@ bunsan_add_shared_library(${PROJECT_NAME}
     src/environment.cpp
 
     src/filesystem/tempdir.cpp
+    src/filesystem/read_data.cpp
 )
 
 bunsan_install_headers()
