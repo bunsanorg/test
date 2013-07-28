@@ -17,5 +17,6 @@ bunsan_add_shared_library(${PROJECT_NAME}
 
 bunsan_install_headers()
 bunsan_install_targets(${PROJECT_NAME})
+bunsan_install_plugins(BunsanCmake)
 
 bunsan_include_tests()
