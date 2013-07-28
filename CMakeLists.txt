@@ -13,6 +13,8 @@ add_definitions(-DBOOST_TEST_DYN_LINK)
 bunsan_add_shared_library(${PROJECT_NAME}
     src/getenv.cpp
     src/environment.cpp
+
+    src/filesystem/tempdir.cpp
 )
 
 bunsan_install_headers()
