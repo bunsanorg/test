@@ -19,8 +19,6 @@ BOOST_AUTO_TEST_CASE(tempfiles)
     {
         bunsan::testing::filesystem::tempfiles tmp;
         path = tmp.allocate();
-        BOOST_REQUIRE(!boost::filesystem::exists(path));
-        bunsan::testing::filesystem::write_data(path, "");
         BOOST_REQUIRE(boost::filesystem::exists(path));
     }
     BOOST_REQUIRE(!boost::filesystem::exists(path));
