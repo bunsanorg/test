@@ -1,10 +1,11 @@
 #pragma once
 
 #include <boost/filesystem/path.hpp>
+#include <boost/noncopyable.hpp>
 
 namespace bunsan{namespace testing{namespace filesystem
 {
-    class tempfiles
+    class tempfiles: private boost::noncopyable
     {
     public:
         tempfiles();
