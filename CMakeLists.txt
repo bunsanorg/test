@@ -17,6 +17,7 @@ bunsan_add_shared_library(${PROJECT_NAME}
 
     src/filesystem/tempdir.cpp
     src/filesystem/tempfiles.cpp
+    src/filesystem/tempfile.cpp
     src/filesystem/read_data.cpp
     src/filesystem/write_data.cpp
 )
