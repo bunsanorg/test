@@ -1,6 +1,7 @@
 #define BOOST_TEST_MODULE filesystem
 #include <boost/test/unit_test.hpp>
 
+#include "bunsan/testing/filesystem/tempfiles.hpp"
 #include "bunsan/testing/filesystem/tempdir.hpp"
 #include "bunsan/testing/filesystem/read_data.hpp"
 #include "bunsan/testing/filesystem/write_data.hpp"
@@ -11,6 +12,19 @@
 BOOST_AUTO_TEST_SUITE(testing)
 
 BOOST_AUTO_TEST_SUITE(filesystem)
+
+BOOST_AUTO_TEST_CASE(tempfiles)
+{
+    boost::filesystem::path path;
+    {
+        bunsan::testing::filesystem::tempfiles tmp;
+        path = tmp.allocate();
+        BOOST_REQUIRE(!boost::filesystem::exists(path));
+        bunsan::testing::filesystem::write_data(path, "");
+        BOOST_REQUIRE(boost::filesystem::exists(path));
+    }
+    BOOST_REQUIRE(!boost::filesystem::exists(path));
+}
 
 BOOST_AUTO_TEST_CASE(tempdir)
 {
