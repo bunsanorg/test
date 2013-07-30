@@ -12,14 +12,17 @@ namespace bunsan{namespace testing{namespace filesystem
         BOOST_TEST_MESSAGE("Attempt to read " << path << ".");
         BOOST_REQUIRE(boost::filesystem::exists(path));
         boost::filesystem::ifstream fin(path);
-        BOOST_REQUIRE(fin.is_open());
+        if (!fin.is_open())
+            BOOST_FAIL(path << ": " << strerror(errno));
         const std::string rdata{
             std::istreambuf_iterator<char>(fin),
             std::istreambuf_iterator<char>()
         };
-        BOOST_REQUIRE(fin);
+        if (!fin)
+            BOOST_FAIL(path << ": " << strerror(errno));
         fin.close();
-        BOOST_REQUIRE(fin);
+        if (!fin)
+            BOOST_FAIL(path << ": " << strerror(errno));
         return rdata;
     }
 }}}
