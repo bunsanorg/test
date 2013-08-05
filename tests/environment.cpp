@@ -1,7 +1,7 @@
 #define BOOST_TEST_MODULE environment
 #include <boost/test/unit_test.hpp>
 
-#include "bunsan/testing/environment.hpp"
+#include <bunsan/testing/environment.hpp>
 
 #include <boost/filesystem/operations.hpp>
 
