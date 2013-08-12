@@ -1,6 +1,6 @@
 #include <bunsan/testing/getenv.hpp>
 
-#include <boost/test/unit_test.hpp>
+#include <boost/test/test_tools.hpp>
 
 namespace bunsan{namespace testing
 {

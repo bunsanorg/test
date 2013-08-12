@@ -1,7 +1,7 @@
 #include <bunsan/testing/filesystem/tempdir.hpp>
 
 #include <boost/filesystem/operations.hpp>
-#include <boost/test/unit_test.hpp>
+#include <boost/test/test_tools.hpp>
 
 namespace bunsan{namespace testing{namespace filesystem
 {
