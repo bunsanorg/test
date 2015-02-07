@@ -16,12 +16,12 @@ namespace bunsan{namespace testing{namespace dir
     namespace tests
     {
         BUNSAN_STATIC_PATH(source, dir::source() / "tests")
-        BUNSAN_STATIC_PATH(binary, dir::binary() / "tests");
+        BUNSAN_STATIC_PATH(binary, dir::binary() / "tests")
 
         namespace resources
         {
-            BUNSAN_STATIC_PATH(source, tests::source() / "resources");
-            BUNSAN_STATIC_PATH(binary, tests::binary() / "resources");
+            BUNSAN_STATIC_PATH(source, tests::source() / "resources")
+            BUNSAN_STATIC_PATH(binary, tests::binary() / "resources")
         }
     }
 }}}
