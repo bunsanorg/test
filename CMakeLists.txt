@@ -17,8 +17,8 @@ bunsan_add_library(${PROJECT_NAME}
     src/filesystem/read_data.cpp
     src/filesystem/write_data.cpp
 )
-target_compile_definitions(${PROJECT_NAME} PUBLIC BOOST_TEST_DYN_LINK)
-bunsan_use_package(${PROJECT_NAME} Boost
+bunsan_use_threads(${PROJECT_NAME})
+bunsan_use_boost(${PROJECT_NAME}
     system
     filesystem
     unit_test_framework
