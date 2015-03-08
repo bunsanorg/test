@@ -8,6 +8,8 @@ find_package(BunsanCMake CONFIG REQUIRED)
 
 if(UNIX)
     set(platform_sources unix)
+elseif(WIN32)
+    set(platform_sources win32)
 else()
     message(SEND_ERROR "Platform is not supported")
 endif()
