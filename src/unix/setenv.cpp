@@ -1,6 +1,6 @@
 #include <bunsan/testing/setenv.hpp>
 
-#include <cstdlib>
+#include <stdlib.h>
 
 namespace bunsan{namespace testing
 {

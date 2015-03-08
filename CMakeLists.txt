@@ -6,9 +6,16 @@ project(bunsan_testing)
 
 find_package(BunsanCMake CONFIG REQUIRED)
 
+if(UNIX)
+    set(platform_sources unix)
+else()
+    message(SEND_ERROR "Platform is not supported")
+endif()
+
 bunsan_add_library(${PROJECT_NAME}
+
     src/getenv.cpp
-    src/setenv.cpp
+    src/${platform_sources}/setenv.cpp
     src/environment.cpp
 
     src/filesystem/tempdir.cpp
