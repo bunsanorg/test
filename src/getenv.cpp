@@ -2,12 +2,14 @@
 
 #include <boost/test/test_tools.hpp>
 
+#include <cstdlib>
+
 namespace bunsan{namespace testing
 {
     const char *getenv(const char *const key)
     {
         BOOST_REQUIRE(key);
-        const char *value = ::getenv(key);
+        const char *value = std::getenv(key);
         BOOST_REQUIRE(value);
         return value;
     }
