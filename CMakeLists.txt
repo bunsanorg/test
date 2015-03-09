@@ -8,6 +8,8 @@ find_package(BunsanCMake CONFIG REQUIRED)
 
 if(UNIX)
     set(platform_sources unix)
+elseif(MINGW)
+    set(platform_sources mingw)
 elseif(WIN32)
     set(platform_sources win32)
 else()
