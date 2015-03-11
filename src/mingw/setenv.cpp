@@ -4,8 +4,6 @@
 
 #include <cstdlib>
 
-extern "C" int putenv(char *);
-
 namespace bunsan{namespace testing
 {
     int setenv(const char *const key, const char *const value, const bool overwrite)
