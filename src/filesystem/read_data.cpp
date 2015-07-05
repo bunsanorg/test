@@ -1,4 +1,4 @@
-#include <bunsan/testing/filesystem/read_data.hpp>
+#include <bunsan/test/filesystem/read_data.hpp>
 
 #include <boost/filesystem/fstream.hpp>
 #include <boost/filesystem/operations.hpp>
@@ -6,7 +6,7 @@
 
 #include <system_error>
 
-namespace bunsan{namespace testing{namespace filesystem
+namespace bunsan{namespace test{namespace filesystem
 {
     std::string read_data(const boost::filesystem::path &path)
     {

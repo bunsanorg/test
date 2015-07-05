@@ -1,7 +1,7 @@
-#include <bunsan/testing/environment.hpp>
-#include <bunsan/testing/getenv.hpp>
+#include <bunsan/test/environment.hpp>
+#include <bunsan/test/getenv.hpp>
 
-namespace bunsan{namespace testing{namespace dir
+namespace bunsan{namespace test{namespace dir
 {
 #define BUNSAN_STATIC_PATH(NAME, EXPR) \
     const boost::filesystem::path &NAME() \

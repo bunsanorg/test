@@ -1,10 +1,10 @@
-#include <bunsan/testing/setenv.hpp>
+#include <bunsan/test/setenv.hpp>
 
 #include <string>
 
 #include <cstdlib>
 
-namespace bunsan{namespace testing
+namespace bunsan{namespace test
 {
     int setenv(const char *const key, const char *const value, const bool overwrite)
     {

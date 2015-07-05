@@ -1,8 +1,8 @@
 #pragma once
 
-#include <bunsan/testing/filesystem/tempfiles.hpp>
+#include <bunsan/test/filesystem/tempfiles.hpp>
 
-namespace bunsan{namespace testing{namespace filesystem
+namespace bunsan{namespace test{namespace filesystem
 {
     struct tempfile: private tempfiles
     {

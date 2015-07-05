@@ -1,6 +1,6 @@
 #pragma once
 
-namespace bunsan{namespace testing
+namespace bunsan{namespace test
 {
     int setenv(const char *const key,
                const char *const value,
@@ -8,6 +8,6 @@ namespace bunsan{namespace testing
     int unsetenv(const char *const key);
 }}
 
-#define BUNSAN_TESTING_SETOPT(NAME, VALUE) \
+#define BUNSAN_TEST_SETOPT(NAME, VALUE) \
     const static int NAME##_##__LINE__ = \
-        ::bunsan::testing::setenv(#NAME, VALUE, true)
+        ::bunsan::test::setenv(#NAME, VALUE, true)

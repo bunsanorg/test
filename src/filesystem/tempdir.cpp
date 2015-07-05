@@ -1,9 +1,9 @@
-#include <bunsan/testing/filesystem/tempdir.hpp>
+#include <bunsan/test/filesystem/tempdir.hpp>
 
 #include <boost/filesystem/operations.hpp>
 #include <boost/test/test_tools.hpp>
 
-namespace bunsan{namespace testing{namespace filesystem
+namespace bunsan{namespace test{namespace filesystem
 {
     tempdir::tempdir():
         path(boost::filesystem::temp_directory_path() / boost::filesystem::unique_path())

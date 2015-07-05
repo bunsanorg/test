@@ -3,7 +3,7 @@
 #include <boost/filesystem/path.hpp>
 #include <boost/noncopyable.hpp>
 
-namespace bunsan{namespace testing{namespace filesystem
+namespace bunsan{namespace test{namespace filesystem
 {
     class tempfiles: private boost::noncopyable
     {

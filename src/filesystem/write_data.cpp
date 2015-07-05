@@ -1,10 +1,10 @@
-#include <bunsan/testing/filesystem/write_data.hpp>
+#include <bunsan/test/filesystem/write_data.hpp>
 
 #include <boost/filesystem/operations.hpp>
 #include <boost/filesystem/fstream.hpp>
 #include <boost/test/unit_test.hpp>
 
-namespace bunsan{namespace testing{namespace filesystem
+namespace bunsan{namespace test{namespace filesystem
 {
     void write_data(const boost::filesystem::path &path, const std::string &data)
     {

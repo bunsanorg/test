@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.0)
 
 include(${CMAKE_SOURCE_DIR}/system-config.cmake OPTIONAL)
 
-project(bunsan_testing)
+project(bunsan_test)
 
 if(BunsanCMakeBuiltin)
     BunsanCMakeLoad()

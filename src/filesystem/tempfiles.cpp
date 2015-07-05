@@ -1,9 +1,9 @@
-#include <bunsan/testing/filesystem/tempfiles.hpp>
-#include <bunsan/testing/filesystem/write_data.hpp>
+#include <bunsan/test/filesystem/tempfiles.hpp>
+#include <bunsan/test/filesystem/write_data.hpp>
 
 #include <boost/filesystem/operations.hpp>
 
-namespace bunsan{namespace testing{namespace filesystem
+namespace bunsan{namespace test{namespace filesystem
 {
     tempfiles::tempfiles() {}
 

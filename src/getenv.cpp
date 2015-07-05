@@ -1,10 +1,10 @@
-#include <bunsan/testing/getenv.hpp>
+#include <bunsan/test/getenv.hpp>
 
 #include <boost/test/test_tools.hpp>
 
 #include <cstdlib>
 
-namespace bunsan{namespace testing
+namespace bunsan{namespace test
 {
     const char *getenv(const char *const key)
     {
