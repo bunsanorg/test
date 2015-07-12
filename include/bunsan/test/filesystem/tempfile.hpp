@@ -2,12 +2,16 @@
 
 #include <bunsan/test/filesystem/tempfiles.hpp>
 
-namespace bunsan{namespace test{namespace filesystem
-{
-    struct tempfile: private tempfiles
-    {
-        tempfile();
+namespace bunsan {
+namespace test {
+namespace filesystem {
 
-        boost::filesystem::path path;
-    };
-}}}
+struct tempfile : private tempfiles {
+  tempfile();
+
+  boost::filesystem::path path;
+};
+
+}  // namespace filesystem
+}  // namespace test
+}  // namespace bunsan

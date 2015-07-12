@@ -3,22 +3,24 @@
 
 #include <boost/filesystem/operations.hpp>
 
-namespace bunsan{namespace test{namespace filesystem
-{
-    tempfiles::tempfiles() {}
+namespace bunsan {
+namespace test {
+namespace filesystem {
 
-    tempfiles::~tempfiles()
-    {
-        for (const boost::filesystem::path &file: m_files)
-            boost::filesystem::remove(file);
-    }
+tempfiles::tempfiles() {}
 
-    boost::filesystem::path tempfiles::allocate()
-    {
-        m_files.push_back(
-            boost::filesystem::temp_directory_path() /
-            boost::filesystem::unique_path());
-        write_data(m_files.back(), "");
-        return m_files.back();
-    }
-}}}
+tempfiles::~tempfiles() {
+  for (const boost::filesystem::path &file : m_files)
+    boost::filesystem::remove(file);
+}
+
+boost::filesystem::path tempfiles::allocate() {
+  m_files.push_back(boost::filesystem::temp_directory_path() /
+                    boost::filesystem::unique_path());
+  write_data(m_files.back(), "");
+  return m_files.back();
+}
+
+}  // namespace filesystem
+}  // namespace test
+}  // namespace bunsan
